@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Octopus : Movement
 {
     // Start is called before the first frame update
@@ -9,7 +10,8 @@ public class Octopus : Movement
 
     void Start()
     {
-        base.Start();
+        // ABSTRACTION AND POLYMORPHISM
+        base.Start(); // used base to reduce code
         Name = "Octopus";
     }
 
@@ -22,7 +24,9 @@ public class Octopus : Movement
 
     public override void SpecialAbility()
     {
+        
         base.SpecialAbility();
+        // POLYMORPHISM
         Debug.Log("Octopus special attack!");
         if (Input.GetKeyDown(KeyCode.Space))
         {
